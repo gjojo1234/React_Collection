@@ -1,0 +1,25 @@
+h1 {
+  padding-top: 1vh;
+  color: #0e0e38;
+  letter-spacing: 0.15rem;
+  margin-left: 5vw;
+}
+
+.lists {
+  display: inline-block;
+  margin: 0 auto 0 5vw;
+  font-size: 0.75rem;
+  padding-left: 0;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    margin-left: 3vw;
+  }
+  .lists {
+    margin-left: 3vw;
+  }
+}
