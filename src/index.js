@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-import { PopularProvider } from "./PopularContext";
+import { ImageProvider } from "./ImageContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <PopularProvider>
+    <ImageProvider>
       <App />
-    </PopularProvider>
+    </ImageProvider>
   </React.StrictMode>
 );

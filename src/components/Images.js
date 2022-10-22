@@ -1,19 +1,24 @@
 import React, { useContext } from "react";
-import { PopularContext } from "../PopularContext";
+import { ImageContext } from "../ImageContext";
 import "./images.css";
 
 const Images = () => {
-  const collect = useContext(PopularContext);
+  const myData = useContext(ImageContext);
 
   return (
     <div className="container">
-      <img src={collect[0].images[0].url} alt="" className="item1" />
+      <img src={myData.state.url} alt="" className="item1" />
       <div className="item2">
-        {collect[0].images.map((item) => {
+        {myData.collect[0].images.map((item) => {
           const { id, url } = item;
           return (
             <div key={id}>
-              <img src={url} alt="" className="imgItem" />
+              <img
+                src={url}
+                alt=""
+                className="imgItem"
+                onClick={myData.change}
+              />
             </div>
           );
         })}

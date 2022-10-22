@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { PopularContext } from "../PopularContext";
+import { ImageContext } from "../ImageContext";
 import "./navig.css";
 
 const Navig = () => {
-  const collect = useContext(PopularContext);
+  const myData = useContext(ImageContext);
   return (
     <div>
       <h1 className="nadpis">Popular Collections</h1>
       <ul className="lists">
-        {collect.map((item) => {
+        {myData.collect.map((item) => {
           const { id, name } = item;
           return (
             <li key={id} style={{ listStyleType: "none", fontSize: "1.5em" }}>
