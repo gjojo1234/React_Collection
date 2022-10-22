@@ -67,38 +67,21 @@
 }
 
 @media screen and (min-width: 900px) {
-  .container,
-  .item1,
   .item2 {
-    width: 40vw;
+    width: 80vw;
   }
   .container {
+    display: flex;
+    align-items: center;
+    width: 85vw;
     height: 50vh;
   }
   .item1 {
-    margin: 3vh auto;
-    width: 35vw;
+    display: none;
   }
 
   .imgItem {
-    width: 10vw;
-    height: 10vh;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .container,
-  .item1,
-  .item2 {
-    width: 30vw;
-  }
-  .item1 {
-    margin: 3vh auto;
-    width: 26vw;
-  }
-
-  .imgItem {
-    width: 8vw;
-    height: 10vh;
+    width: 25vw;
+    height: 30vh;
   }
 }

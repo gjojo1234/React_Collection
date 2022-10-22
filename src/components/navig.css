@@ -20,6 +20,10 @@ h1 {
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
 }
+.lists:hover {
+  cursor: pointer;
+  color: blue;
+}
 
 @media screen and (min-width: 900px) {
   h1 {
