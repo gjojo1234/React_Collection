@@ -4,8 +4,10 @@ import { reducer } from "./reducer";
 
 const ImageContext = React.createContext();
 const collect = data;
+
 const view = {
-  url: "/img/nature1.jpg",
+  id: 0,
+  url: collect[0].images[0].url,
 };
 
 function ImageProvider({ children }) {
@@ -15,8 +17,17 @@ function ImageProvider({ children }) {
 
     dispatch({ type: "CHANGE", payload: e.target.src });
   };
+  const changeID = (e) => {
+    e.preventDefault();
+
+    dispatch({
+      type: "CHANGE_ID",
+      id: e.target.id,
+      url: collect[e.target.id].images[0].url,
+    });
+  };
   return (
-    <ImageContext.Provider value={{ state, change, collect }}>
+    <ImageContext.Provider value={{ state, change, collect, changeID }}>
       {children}
     </ImageContext.Provider>
   );

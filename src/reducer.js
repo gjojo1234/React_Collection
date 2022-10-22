@@ -1,9 +1,9 @@
 export const reducer = (state, action) => {
   switch (action.type) {
     case "CHANGE":
-      return {
-        url: action.payload,
-      };
+      return { ...state, url: action.payload };
+    case "CHANGE_ID":
+      return { id: action.id, url: action.url };
     default:
       throw new Error("error");
   }

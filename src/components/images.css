@@ -1,6 +1,7 @@
 .container {
   display: flex;
   width: 80vw;
+
   flex-wrap: wrap;
   background-color: #fff;
   justify-content: space-around;
@@ -34,12 +35,17 @@
 }
 
 @media screen and (min-width: 600px) {
+  .container {
+    height: 60vh;
+  }
   .container,
   .item1,
   .item2 {
     width: 60vw;
   }
-
+  .item1 {
+    height: 30vh;
+  }
   .imgItem {
     width: 18vw;
   }
@@ -66,10 +72,12 @@
   .item2 {
     width: 40vw;
   }
+  .container {
+    height: 50vh;
+  }
   .item1 {
     margin: 3vh auto;
     width: 35vw;
-    height: 25vh;
   }
 
   .imgItem {
@@ -87,7 +95,6 @@
   .item1 {
     margin: 3vh auto;
     width: 26vw;
-    height: 25vh;
   }
 
   .imgItem {

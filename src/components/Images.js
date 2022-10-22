@@ -9,7 +9,7 @@ const Images = () => {
     <div className="container">
       <img src={myData.state.url} alt="" className="item1" />
       <div className="item2">
-        {myData.collect[0].images.map((item) => {
+        {myData.collect[myData.state.id].images.map((item) => {
           const { id, url } = item;
           return (
             <div key={id}>
